@@ -1,0 +1,20 @@
+[package]
+name = "bad_email"
+version = "0.1.0"
+edition = "2021"
+description = "Crate used to compare email_address to list of over 10,000 known disposable email domains"
+keywords = ["email", "validation", "domain", "filtering", "dispoable", "dispoable email address"]
+include = ["src/**/*", "README.md", "LICENSE", "default_email_list.toml"]
+license = "MIT"
+
+[dependencies]
+serde = "1.0.195"
+serde_json = "1.0.111"
+serde_derive = "1.0.195"
+toml = "0.8.8"
+
+[profile.dev]
+opt-level = 1
+
+[profile.release]
+opt-level = 3
