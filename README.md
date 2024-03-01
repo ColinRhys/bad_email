@@ -2,7 +2,7 @@
 
 ![Docs.rs badge](https://docs.rs/bad_email/badge.svg)
 
-This crate can be used to check email domains against a list of 10235 known [disposable email domains](http://en.wikipedia.org/wiki/Disposable_email_address). 
+This crate can be used to check email domains against a list of 10234 known [disposable email domains](http://en.wikipedia.org/wiki/Disposable_email_address). 
 
 The crate has one function that returns true or false based on a full email being passed in as a copy of str slice and then splinting the str on '@' and then comparing the domain name to the list of unwanted domain names. 
 
