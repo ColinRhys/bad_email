@@ -44,7 +44,13 @@ pub fn is_email_unwanted(email_address: &str) -> bool {
 }
 
 pub fn extract_domain(email_address: &str) -> Option<&str> {
-  email_address.split('@').nth(1)
+  // Remove trailing dot from email address domain. Domains all end in a literal dot (period) character
+  // therefore john@example.com is identical to john@example.com.
+  // This new code will remove te trailing dot. See RFC1034 and subsequent updates for more info
+  // https://datatracker.ietf.org/doc/html/rfc1034
+  //
+  // @SpellignErr 03Mar2024
+  email_address.strip_suffix(".").unwrap_or(email_address).split('@').nth(1)
 }
 
 // Functions - End
