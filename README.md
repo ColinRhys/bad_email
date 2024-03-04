@@ -2,7 +2,7 @@
 
 ![Docs.rs badge](https://docs.rs/bad_email/badge.svg)
 
-This crate can be used to check email domains against a list of 10234 known [disposable email domains](http://en.wikipedia.org/wiki/Disposable_email_address). <!-- The first line of the file has no domain, so it doesn't count. @SpellignErr 03Mar2024 -->
+This crate can be used to check email domains against a list of 10234 known [disposable email domains](http://en.wikipedia.org/wiki/Disposable_email_address).
 
 The crate has one function that returns true or false based on a full email being passed in as a copy of str slice and then splinting the str on '@' and then comparing the domain name to the list of unwanted domain names. 
 
@@ -42,3 +42,10 @@ if is_email_unwanted(email_address) {
 # Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvement, please open an issue or submit a pull request.
+
+# Changlog
+
+### 0.1.1
+- extract_domain() function now strips trailing "."
+- Number of bad email domains compaired corrected in read me
+- Thank you to @SpellignErr for the contributions

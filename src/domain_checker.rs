@@ -101,7 +101,11 @@ use super::{is_email_unwanted, extract_domain};
     let email = "user_name@yahoo.com";
     assert_eq!(extract_domain(email), Some("yahoo.com"))
   }
+
+  // extract domain - strips trailing "."
+  #[test]
+  fn extract_domain_strips_trailing_period() {
+    let email = "user_name@mostlysunny.com.";
+    assert_eq!(extract_domain(email), Some("mostlysunny.com"))
+  }
 }
-
-
-
